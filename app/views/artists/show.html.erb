@@ -1,0 +1,15 @@
+<h1>Artist</h1>
+
+<% if flash[:success] %>
+<%= flash[:success] %>
+<% end %><br>
+
+<%= @artist.age %><br>
+<%= @artist.title %><br>
+<%= @artist.name %><br>
+
+<h1>All Artist's Instruments</h1>
+
+<% @artist.instruments.each do |instrument| %>
+    <%= instrument.name %><br>
+<% end %>
